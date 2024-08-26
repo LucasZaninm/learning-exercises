@@ -3,7 +3,7 @@ const prompt = require("data-sync"); //deixei pronto a opção caso utilize o pr
 //1. Escreva um programa que recebe um número inteiro e verifica se ele é par ou ímpar
 //utilizando uma estrutura de controle if.
 
-// let i = Number()
+// let i = parseInt()
 //     if( i % 2 === 0) {
 //         console.log(`${i} é um número par!`)
 //     } else{
@@ -14,7 +14,7 @@ const prompt = require("data-sync"); //deixei pronto a opção caso utilize o pr
 //adolescente, adulto, idoso) com base no valor fornecido, utilizando uma estrutura de
 //controle if-else.
 
-// let age = Number(37)
+ //let age = parseInt(37)
 // if( age == 0 || age <= 12 ){
 //     console.log(`${age} anos é uma criança`)
 // } else if( age == 13 || age <=17){
@@ -27,7 +27,7 @@ const prompt = require("data-sync"); //deixei pronto a opção caso utilize o pr
 //3. Implemente um programa que recebe uma nota de 0 a 10 e classifica como
 //"Aprovado", "Recuperação", ou "Reprovado" utilizando if-else if.
 
-// let nota = Number(10);
+ //let nota = parseInt(10);
 // if (nota == 0 || nota <= 5) {
 //   console.log(`${nota} Recuperação/Reprovado`);
 // } else if (nota == 6 || nota <= 10) {
@@ -61,8 +61,8 @@ const prompt = require("data-sync"); //deixei pronto a opção caso utilize o pr
 // determina a categoria de peso (baixo peso, peso normal, sobrepeso, obesidade)
 // utilizando if-else.
 
-// let weight = Number(); //peso
-// let height = Number(); //altura
+// let weight = parseFloat(); //peso
+// let height = parseFloat(); //altura
 // let IMC = weight / (height * height);
 // if (IMC <= 18.5) {
 //   console.log(`${IMC} Low Weight`);
@@ -82,9 +82,9 @@ const prompt = require("data-sync"); //deixei pronto a opção caso utilize o pr
 // Triângulo escaleno: possui todos os lados diferentes (A<>B e B <> C)
 // Triângulo eqüilátero: possui todos os lados iguais (A=B e B=C)
 
-// let sideA = Number()
-// let sideB = Number()
-// let sideC = Number()
+// let sideA = parseInt()
+// let sideB = parseInt()
+// let sideC = parseInt()
 
 // if (sideA < sideB + sideC && sideB < sideA + sideC && sideC < sideA + sideB) {
 //   console.log(
@@ -105,18 +105,55 @@ const prompt = require("data-sync"); //deixei pronto a opção caso utilize o pr
 // forem compradas pelo menos doze. Escreva um algoritmo que leia o número de maçãs
 // compradas, calcule e escreva o valor total da compra.
 
-function purchasingApples() {
-  let buyApples = Number(prompt("Digite a quantidade de maçãs que deseja comprar")
-  );
-  let valueApple;
+// function purchasingApples() {
+//let buyApples = parseInt(prompt("Digite a quantidade de maçãs que deseja comprar")
+//   );
+//   let valueApple;
 
-  if (buyApples <= 12) {
-    let valueApple = 0.30;
-  } else {
-    let valueApple = 0.25;
-  }
-  let purchasedValue = valueApple * buyApples;
-  console.log(`o valor total da compra é R$:${purchasedValue}`);
-  return purchasedValue;
+//   if (buyApples <= 12) {
+//     let valueApple = 0.30;
+//   } else {
+//     let valueApple = 0.25;
+//   }
+//   let purchasedValue = valueApple * buyApples;
+//   console.log(`o valor total da compra é R$:${purchasedValue}`);
+//   return purchasedValue;
+// }
+// purchasingApples()
+
+//8. Escreva um algoritmo para ler 2 valores (considere que não serão lidos valores iguais)
+// e escreve-los em ordem crescente.
+
+// let Value1 = parseFloat(prompt("Escolha um número"))
+// let Value2 = parseFloat(prompt("Escolha um número"))
+// while (Value1 === Value2) {
+//   console.log("Os números escolhidos não podem ser iguais")
+// }
+
+// if( Value1 < Value2){
+//   console.log(`valores em ordem crescente: ${Value1}, ${Value2}`)
+// } else{
+//   console.log(`Valores em ordem decrescente: ${Value2}, ${Value1}`)
+// }
+
+//9. Implemente um programa que exibe uma contagem regressiva de 10 até 1 no console
+//utilizando um loop for.
+// for (let i = 10; i >=1; i --){
+//   console.log(i)
+// }
+
+//10. Escreva um algoritmo para ler um número inteiro e escrevê-lo na tela 10 vezes.
+// let numInt = parseInt(prompt("insira um número para repetilo dez vezes"))
+// for (let i = 0; i < 10; i ++ ){
+//   console.log(numInt)
+// }
+// 
+//Escreva um programa que solicita ao usuário 5 números e calcula a soma total
+//utilizando um loop for.
+let sumTotal = 0
+for(i = 1; i <= 5; i ++){
+
+ let number = parseFloat(prompt(`Insira uma valor: ${i}`))
+sumTotal =+ number
 }
-purchasingApples()
+console.log(sumTotal)
