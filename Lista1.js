@@ -1,4 +1,4 @@
-const prompt = require("data-sync"); //deixei pronto a opção caso utilize o prompt em algum exercício
+const prompt = require("prompt-sync")(); //deixei pronto a opção caso utilize o prompt em algum exercício
 
 //1. Escreva um programa que recebe um número inteiro e verifica se ele é par ou ímpar
 //utilizando uma estrutura de controle if.
@@ -14,7 +14,7 @@ const prompt = require("data-sync"); //deixei pronto a opção caso utilize o pr
 //adolescente, adulto, idoso) com base no valor fornecido, utilizando uma estrutura de
 //controle if-else.
 
- //let age = parseInt(37)
+//let age = parseInt(37)
 // if( age == 0 || age <= 12 ){
 //     console.log(`${age} anos é uma criança`)
 // } else if( age == 13 || age <=17){
@@ -27,7 +27,7 @@ const prompt = require("data-sync"); //deixei pronto a opção caso utilize o pr
 //3. Implemente um programa que recebe uma nota de 0 a 10 e classifica como
 //"Aprovado", "Recuperação", ou "Reprovado" utilizando if-else if.
 
- //let nota = parseInt(10);
+//let nota = parseInt(10);
 // if (nota == 0 || nota <= 5) {
 //   console.log(`${nota} Recuperação/Reprovado`);
 // } else if (nota == 6 || nota <= 10) {
@@ -101,12 +101,12 @@ const prompt = require("data-sync"); //deixei pronto a opção caso utilize o pr
 //   console.log("Os lados fornecidos não formam um triângulo");
 // }
 
-//7. As maçãs custam R$ 0,30 se forem compradas menos do que uma dúzia, e R$ 0,25 se
+// 7. As maçãs custam R$ 0,30 se forem compradas menos do que uma dúzia, e R$ 0,25 se
 // forem compradas pelo menos doze. Escreva um algoritmo que leia o número de maçãs
 // compradas, calcule e escreva o valor total da compra.
 
 // function purchasingApples() {
-//let buyApples = parseInt(prompt("Digite a quantidade de maçãs que deseja comprar")
+// let buyApples = parseInt(prompt("Digite a quantidade de maçãs que deseja comprar")
 //   );
 //   let valueApple;
 
@@ -147,13 +147,95 @@ const prompt = require("data-sync"); //deixei pronto a opção caso utilize o pr
 // for (let i = 0; i < 10; i ++ ){
 //   console.log(numInt)
 // }
-// 
+//
 //Escreva um programa que solicita ao usuário 5 números e calcula a soma total
 //utilizando um loop for.
-let sumTotal = 0
-for(i = 1; i <= 5; i ++){
+// let sumTotal = 0;
+// for (i = 1; i <= 5; i++) {
+//   let number = parseFloat(prompt(`Insira um valor: ${i}:`));
 
- let number = parseFloat(prompt(`Insira uma valor: ${i}`))
-sumTotal =+ number
-}
-console.log(sumTotal)
+//   while (isNaN(number)) {
+//     console.log("Erro, insira um número válido, por favor");
+//     number = parseFloat(prompt(`Insira um valor: ${i}`));
+//   }
+
+//   sumTotal += number;
+// }
+
+// console.log("Soma total:" + sumTotal);
+
+//12. Crie um programa que exibe a tabuada de um número fornecido pelo usuário (de 1 a
+//10) utilizando um loop for.
+
+// let multiplier = Number(prompt('Informe qual nº da tabuada: '));
+
+// if (isNaN(multiplier)) {
+//     console.log(`Por favor, insira um número válido entre 1 e 10.`);
+// } else if (multiplier < 1 || multiplier > 10) {
+//     console.log("Insira um valor entre 1 e 10.");
+// } else {
+//     for (let counter = 1; counter <= 10; counter++) {
+//         console.log(`${multiplier} * ${counter} =`, multiplier * counter);
+//     }
+// }
+
+// 13. Fazer um algoritmo para receber números decimais até que o usuário digite 0 e fazer
+// a média aritmética desses números.
+
+// let entranceNumber = parseFloat(prompt("Digite um número ou digite 0 para sair: "))
+// let totalNumber = 0
+// let sumNumber = 0
+
+// while(entranceNumber !== 0){
+//        sumNumber += entranceNumber
+//    totalNumber++
+//    entranceNumber = parseFloat(prompt(`Digite o próximo número: `))
+// }
+// if (totalNumber  > 0){
+//    console.log( `Média aritmética: `, sumNumber / totalNumber)
+
+// }else {
+//    console.log(`Insira um número.`)
+// }
+
+// 14. Crie um programa que calcula o fatorial de um número fornecido pelo usuário
+// utilizando um loop for ou while.
+// 15. Escreva um programa que gera e imprime os primeiros 10 números da sequência de
+// Fibonacci utilizando um loop for.
+// let factorialNumber = parseFloat(
+//   prompt("Insira um número para calculo do seu fatorial:")
+// );
+// let factorial = 1;
+// if (factorialNumber < 0) {
+//   console.log("O número inserido é invalido");
+// } else {
+//   for (let i = 1; i <= factorialNumber; i++) {
+//     factorial *= i;
+//   }
+//   console.log(`O fatorial de ${factorialNumber} é ${factorial}.`);
+// }
+// 15. Escreva um programa que gera e imprime os primeiros 10 números da sequência de
+//Fibonacci utilizando um loop for.
+
+// let numberA = 0
+// let numberB = 1
+// console.log("Os primeiros dez primeiros números da sequência de Fibonacci são:")
+// for (let i = 0; i < 10; i++){
+//    console.log(numberA)
+//   numberC = numberA + numberB
+//    numberA = numberB
+//    numberB = numberC
+// }
+
+
+// let numberA = 0;
+// let numberB = 1;
+// let fibs = [];
+
+// for (let i = 0; i < 10; i++) {
+//     fibs.push(numberA);
+//     let numberC = numberA + numberB;
+//     numberA = numberB;
+//     numberB = numberC;
+// }
+// console.log(`Os primeiros dez números da sequência de Fibonacci são: ${fibs.join(', ')}`);
