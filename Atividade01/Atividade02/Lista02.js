@@ -91,16 +91,16 @@
 // nome, nota1, e nota2. Use for of para calcular a média das notas de cada
 // aluno e exibir o nome do aluno junto com sua média.
 
-let alunos = [
-  { nome: "Pedro", nota1: 10, nota2: 10 },
-  { nome: "Julio", nota1: 8, nota2: 7 },
-  { nome: "Jonas", nota1: 4, nota2: 7 },
-];
-for (const notas of alunos) {
-  let media = (notas.nota1 + notas.nota2) / 2;
+// let alunos = [
+//   { nome: "Pedro", nota1: 10, nota2: 10 },
+//   { nome: "Julio", nota1: 8, nota2: 7 },
+//   { nome: "Jonas", nota1: 4, nota2: 7 },
+// ];
+// for (const notas of alunos) {
+//   let media = (notas.nota1 + notas.nota2) / 2;
 
-  console.log(`Nome: ${notas.nome}, média: ${media}`);
-}
+//   console.log(`Nome: ${notas.nome}, média: ${media}`);
+// }
 
 // 6. Filtrando Arrays de Objetos
 // ○ Objetivo: Crie um array de objetos funcionarios, onde cada objeto
@@ -108,22 +108,93 @@ for (const notas of alunos) {
 // e exibir apenas os funcionários cujo salário seja maior que um valor
 // específico.
 
+// let funcionarios = [
+//   {nome:"Renato", cargo:"Gestor de pessoas", salario:15000},
+//   {nome:"Geromel", cargo:"Gerente Comercial", salario:5000},
+//   {nome:"Cristaldo", cargo:"Diretor", salario:4500},
+//   {nome:"Dodi", cargo:"Auxiliar de produção", salario:1500},
+//   {nome:"Monsalve", cargo:"Gerente de Projeto", salario:7500},
+
+// ]
+// for (const chave of funcionarios) {
+//   if(chave.salario >= 5000){
+//     console.log(`Os funcionário com salários maiores ou iguais a R$5000,00. São: ${chave.nome}`)
+//   }
+
+// }
+
 // Manipulação de Arrays de Objetos com forEach
 // 7. Modificando Objetos em um Array
 // ○ Objetivo: Crie um array de objetos produtos, onde cada objeto tem nome,
 // preco, e desconto. Use forEach para aplicar um desconto de 10% em todos
 // os produtos e exibir o novo preço.
-
+// let produtos = [
+//   { name: "Arroz", preço: 5.25, desconto: 0.1 },
+//   { name: "Feijão", preço: 4.25, desconto: 0.1 },
+//   { name: "Carne", preço: 37.9, desconto: 0.1 },
+//   { name: "Pão", preço: 0.3, desconto: 0.1 },
+// ];
+// produtos.forEach((chave) => {
+//   let valorDesconto = chave.preço * (1 - chave.desconto);
+//   console.log(
+//     `O valor do produto: ${
+//       chave.name
+//     }, com desconto de 10% ficará R$${valorDesconto.toFixed(2)}`
+//   );
+// });
 // 8. Criando Novos Arrays a Partir de Objetos
 // ○ Objetivo: Crie um array de objetos filmes, onde cada filme tem titulo,
 // diretor, e anoLancamento. Use forEach para criar um novo array
 // contendo apenas os títulos dos filmes.
+
+// let filmes = [
+//   {
+//     titulo: "O Poderoso Chefão",
+//     diretor: "Francis Ford Coppola",
+//     anoLancamento: 1972,
+//   },
+//   {
+//     titulo: "Um Sonho de Liberdade",
+//     diretor: "Frank Darabont",
+//     anoLancamento: 1994,
+//   },
+//   { titulo: "Os Vingadores", diretor: "Joss Whedon", anoLancamento: 2012 },
+//   {
+//     titulo: "O Senhor dos Anéis, O Retorno do Rei",
+//     diretor: "Peter Jackson",
+//     anoLancamento: 2003,
+//   },
+// ];
+
+// let titulosFilmes = [];
+
+// filmes.forEach((chave) => {
+//   titulosFilmes.push(chave.titulo);
+// });
+
+// console.log(titulosFilmes);
 
 // 9. Contabilizando Elementos com uma Condição
 // ○ Objetivo: Crie um array de objetos clientes, cada um com propriedades
 // nome, idade, e cidade. Use forEach para contar quantos clientes têm mais
 // de 30 anos.
 
+let cliente = [
+  {nome:"Lucas", idade: 35, cidade:"Porto Alegre"},
+  {nome:"Joana", idade: 15, cidade:"Cachoeirinha"},
+  {nome:"Ines", idade: 27, cidade:"Canoas"},
+  {nome:"Pedro", idade: 72, cidade:"Alvorada"},
+  {nome:"Carlos", idade: 47, cidade:"Viamão"},
+  {nome:"Carol", idade: 53, cidade:"Porto Alegre"},
+]
+let contador = 0
+cliente.forEach(chave => {
+  if(chave.idade > 30){
+  contador++;
+  
+}
+});
+console.log(`A quantidade de clientes com mais de 30 anos é ${contador}.`)
 // Combinação de Estruturas
 // 10. Criando Relatórios com Objetos e Arrays
 // ○ Objetivo: Crie um array de objetos vendas, onde cada objeto tem produto,
