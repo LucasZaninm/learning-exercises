@@ -179,27 +179,41 @@
 // nome, idade, e cidade. Use forEach para contar quantos clientes têm mais
 // de 30 anos.
 
-let cliente = [
-  {nome:"Lucas", idade: 35, cidade:"Porto Alegre"},
-  {nome:"Joana", idade: 15, cidade:"Cachoeirinha"},
-  {nome:"Ines", idade: 27, cidade:"Canoas"},
-  {nome:"Pedro", idade: 72, cidade:"Alvorada"},
-  {nome:"Carlos", idade: 47, cidade:"Viamão"},
-  {nome:"Carol", idade: 53, cidade:"Porto Alegre"},
-]
-let contador = 0
-cliente.forEach(chave => {
-  if(chave.idade > 30){
-  contador++;
-  
-}
-});
-console.log(`A quantidade de clientes com mais de 30 anos é ${contador}.`)
+// let cliente = [
+//   { nome: "Lucas", idade: 35, cidade: "Porto Alegre" },
+//   { nome: "Joana", idade: 15, cidade: "Cachoeirinha" },
+//   { nome: "Ines", idade: 27, cidade: "Canoas" },
+//   { nome: "Pedro", idade: 72, cidade: "Alvorada" },
+//   { nome: "Carlos", idade: 47, cidade: "Viamão" },
+//   { nome: "Carol", idade: 53, cidade: "Porto Alegre" },
+// ];
+// let contador = 0;
+// cliente.forEach((chave) => {
+//   if (chave.idade > 30) {
+//     contador++;
+//   }
+// });
+// console.log(`A quantidade de clientes com mais de 30 anos é ${contador}.`);
 // Combinação de Estruturas
 // 10. Criando Relatórios com Objetos e Arrays
 // ○ Objetivo: Crie um array de objetos vendas, onde cada objeto tem produto,
 // quantidade e valor. Use forEach para calcular o valor total de vendas de
 // todos os produtos.
+
+let vendas = [
+  {produto:"Notebook" , quantidade: 30, valor: 4999.00},
+  {produto:"Mouse" , quantidade: 100, valor: 180.00 },
+  {produto:"Monitor" , quantidade: 15, valor: 650.00},
+  {produto:"fone" , quantidade: 80, valor: 160.00},
+  {produto:"Teclado" , quantidade: 65 , valor: 220.00},
+]
+let valorTotal = 0
+vendas.forEach(chave => {
+  let valorTotal  = chave.valor
+  
+});
+console.log(`${valorTotal}`)
+
 
 // 11. Agrupando Elementos com forEach
 // ○ Objetivo: Crie um array de objetos pedidos, onde cada pedido tem
